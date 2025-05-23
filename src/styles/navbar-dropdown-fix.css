@@ -1,0 +1,33 @@
+/* Drop-down fix: omogoča, da uporabnik dejansko klikne na podstran */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.dropdown-menu {
+  transition: all 0.2s ease-in-out;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  min-width: 12rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 0.25rem;
+}
+
+/* Prepreči, da dropdown izgine, če gre miška čez rob */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-menu a {
+  white-space: nowrap;
+}
