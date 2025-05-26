@@ -12,6 +12,8 @@ Lexalis je profesionalna predstavitvena spletna stran podjetja, specializiranega
 - [@vueuse/head](https://vueuse.org/core/useHead/) za SEO meta oznake
 
 
+
+
 🔍 SEO in hitrost
 Dodane title in meta description za vsako stran (prek useHead)
 
