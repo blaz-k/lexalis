@@ -1,33 +1,63 @@
-# urska-lexalis
+# Lexalis – Pravno-jezikovna spletna stran
 
-This template should help get you started developing with Vue 3 in Vite.
+Lexalis je profesionalna predstavitvena spletna stran podjetja, specializiranega za pravne prevode, lektoriranje in pravno svetovanje. Stran je zgrajena z uporabo **Vue 3**, **Vite**, **Vue Router** in **Bootstrap**, z dodatno podporo za **SEO**, **AOS animacije** in **responsivnost**.
 
-## Recommended IDE Setup
+## 🔧 Tehnologije
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Vue 3](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
+- [Vue Router](https://router.vuejs.org/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [AOS - Animate On Scroll](https://michalsnik.github.io/aos/)
+- [@vueuse/head](https://vueuse.org/core/useHead/) za SEO meta oznake
 
-## Type Support for `.vue` Imports in TS
+## 📁 Struktura projekta
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+src/
+├── assets/
+├── components/ # AppHeader, AppFooter, ScrollToTopBtn
+├── pages/ # HomePage, AboutPage, ContactPage, ServicesPage
+│ └── services/ # LegalTranslations.vue, Proofreading.vue, itd.
+├── router/ # index.ts z definiranimi potmi
+├── styles/ # Vsi CSS fajli (bootstrap override, globalni stil, itd.)
+└── App.vue # Glavna aplikacijska komponenta
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+🔍 SEO in hitrost
+Dodane title in meta description za vsako stran (prek useHead)
 
-## Project Setup
+Pripravljeno za Google Search Console
 
-```sh
-npm install
-```
+robots.txt in sitemap.xml vključena
 
-### Compile and Hot-Reload for Development
+Pagespeed Insights ocena:
+✅ Desktop: 100/100
+✅ Mobile: 98–100/100
 
-```sh
-npm run dev
-```
+📱 Responsivnost
+Stran je popolnoma prilagojena za mobilne naprave:
 
-### Type-Check, Compile and Minify for Production
+Dropdown meni deluje tudi na dotik
 
-```sh
-npm run build
-```
+Scroll-to-top gumb, vidno samo na manjših zaslonih
+
+Pravilno razmerje slik in postavitve tudi na manjših resolucijah
+
+ℹ️ Ostalo
+Animacije na scroll (fade-in, delay, itd.)
+
+Vključena favicon in logotipi podjetja
+
+Optimizirane slike (lazy loading)
+
+Pripravljeno za nadaljnje SEO nadgradnje (json-ld, structured data)
+
+👩‍⚖️ Projekt je razvit za podjetje Lexalis – pravno-jezikovne storitve.
+Za tehnično pomoč, kontaktirajte razvijalca ali uredite kodo lokalno z uporabo navodil zgoraj.
+
+
+
+
+
+
+
