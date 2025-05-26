@@ -5,7 +5,7 @@
 
       <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">
         <img
-          src="https://images.unsplash.com/photo-1555375771-5c9adf0d3fba"
+          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
           alt="Prevodi pravnih dokumentov"
           class="img-fluid rounded shadow"
           style="max-height: 300px"

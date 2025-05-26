@@ -43,7 +43,7 @@
             </ul>
           </div>
 
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="370">
             <h5 class="fw-bold fs-5">3. Slogovna usklajenost</h5>
             <ul>
               <li>Dokument je stilistično primeren za pravni jezik</li>

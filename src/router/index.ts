@@ -97,8 +97,12 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior() {
+    return { top: 0, behavior: 'smooth' }
+  }
 })
+
 
 // SEO: posodobi <title> iz meta.title
 router.beforeEach((to, from, next) => {

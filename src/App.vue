@@ -1,11 +1,16 @@
 <template>
   <div id="app">
     <AppHeader />
+    
     <main>
       <transition name="fade" mode="out-in">
         <RouterView />
       </transition>
     </main>
+
+    <!-- Pomaknjeno ven iz main -->
+    <ScrollToTopBtn />
+
     <AppFooter />
   </div>
 </template>
@@ -13,6 +18,7 @@
 <script setup lang="ts">
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
+import ScrollToTopBtn from './components/ScrollToTopBtn.vue'
 </script>
 
 <style>
@@ -29,10 +35,14 @@ main {
 
 /* Fade animation for route transitions */
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.8s ease;
 }
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>
 
@@ -42,7 +52,11 @@ main {
   <div id="app">
     <AppHeader />
     <main>
-      <RouterView />
+      <transition name="fade" mode="out-in">
+        <RouterView />
+      </transition>
+      <ScrollToTopBtn />
+
     </main>
     <AppFooter />
   </div>
@@ -51,6 +65,8 @@ main {
 <script setup lang="ts">
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
+import ScrollToTopBtn from './components/ScrollToTopBtn.vue'
+
 </script>
 
 <style>
@@ -59,8 +75,20 @@ import AppFooter from './components/AppFooter.vue'
   flex-direction: column;
   min-height: 100vh;
 }
+
 main {
   flex: 1;
-  padding: 1rem;
+  padding: 2rem 1rem;
+}
+
+/* Fade animation for route transitions */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.8s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+html {
+  scroll-behavior: smooth;
 }
 </style> -->
