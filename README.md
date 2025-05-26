@@ -11,17 +11,6 @@ Lexalis je profesionalna predstavitvena spletna stran podjetja, specializiranega
 - [AOS - Animate On Scroll](https://michalsnik.github.io/aos/)
 - [@vueuse/head](https://vueuse.org/core/useHead/) za SEO meta oznake
 
-## 📁 Struktura projekta
-
-src/
-├── assets/
-├── components/ # AppHeader, AppFooter, ScrollToTopBtn
-├── pages/ # HomePage, AboutPage, ContactPage, ServicesPage
-│ └── services/ # LegalTranslations.vue, Proofreading.vue, itd.
-├── router/ # index.ts z definiranimi potmi
-├── styles/ # Vsi CSS fajli (bootstrap override, globalni stil, itd.)
-└── App.vue # Glavna aplikacijska komponenta
-
 
 🔍 SEO in hitrost
 Dodane title in meta description za vsako stran (prek useHead)
