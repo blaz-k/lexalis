@@ -92,7 +92,8 @@ const routes = [
       title: 'Druge storitve | Lexalis',
       description: 'Prevodi spletnih strani, sodelovanje pri pravnih sporih in projektih – po meri vaših potreb.'
     }
-  }
+  },
+  { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
 
 const router = createRouter({
