@@ -22,23 +22,23 @@
 					<li><RouterLink to="/services/other" class="nav-link">Drugo</RouterLink></li>
 				</ul>
 			</li> -->
-<li class="dropdown" @mouseleave="closeDropdown">
-  <RouterLink
-    to="/services"
-    class="nav-link"
-    @click.prevent="toggleDropdownAndNavigate"
-  >
-    Storitve
-  </RouterLink>
-  <ul class="dropdown-menu" v-show="isOpen">
-    <li><RouterLink to="/services/legal-translations" class="nav-link" @click="closeDropdown">Prevodi pravnih dokumentov</RouterLink></li>
-    <li><RouterLink to="/services/legal-consulting" class="nav-link" @click="closeDropdown">Pravno svetovanje</RouterLink></li>
-    <li><RouterLink to="/services/bilingual-contracts" class="nav-link" @click="closeDropdown">Dvojezične pogodbe</RouterLink></li>
-    <li><RouterLink to="/services/annual-reports" class="nav-link" @click="closeDropdown">Prevodi letnih poročil</RouterLink></li>
-    <li><RouterLink to="/services/proofreading" class="nav-link" @click="closeDropdown">Lektoriranje</RouterLink></li>
-    <li><RouterLink to="/services/other" class="nav-link" @click="closeDropdown">Drugo</RouterLink></li>
-  </ul>
-</li>
+			<li class="dropdown" @mouseleave="closeDropdown">
+			<RouterLink
+				to="/services"
+				class="nav-link"
+				@click.prevent="toggleDropdownAndNavigate"
+			>
+				Storitve
+			</RouterLink>
+			<ul class="dropdown-menu" v-show="isOpen">
+				<li><RouterLink to="/services/legal-translations" class="nav-link" @click="closeDropdown">Prevodi pravnih dokumentov</RouterLink></li>
+				<li><RouterLink to="/services/legal-consulting" class="nav-link" @click="closeDropdown">Pravno svetovanje</RouterLink></li>
+				<li><RouterLink to="/services/bilingual-contracts" class="nav-link" @click="closeDropdown">Dvojezične pogodbe</RouterLink></li>
+				<li><RouterLink to="/services/annual-reports" class="nav-link" @click="closeDropdown">Prevodi letnih poročil</RouterLink></li>
+				<li><RouterLink to="/services/proofreading" class="nav-link" @click="closeDropdown">Lektoriranje</RouterLink></li>
+				<li><RouterLink to="/services/other" class="nav-link" @click="closeDropdown">Drugo</RouterLink></li>
+			</ul>
+			</li>
 
 			<li><RouterLink to="/contact" class="nav-link">Kontakt</RouterLink></li>
 		</ul>
@@ -47,95 +47,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+	import { ref } from 'vue'
+	import { useRouter } from 'vue-router'
 
-const isOpen = ref(false)
-const router = useRouter()
+	const isOpen = ref(false)
+	const router = useRouter()
 
-function toggleDropdownAndNavigate(event: MouseEvent) {
-  event.preventDefault()
-  isOpen.value = !isOpen.value
-  router.push('/services')
-}
+	function toggleDropdownAndNavigate(event: MouseEvent) {
+	event.preventDefault()
+	isOpen.value = !isOpen.value
+	router.push('/services')
+	}
 
-function closeDropdown() {
-  isOpen.value = false
-}
+	function closeDropdown() {
+	isOpen.value = false
+	}
 </script>
 
-<!-- 
-<style scoped>
-
-.app-header {
-  background-color: #fff;
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  position: relative;
-}
-
-.nav-link {
-  color: #000 !important;
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  display: inline-block;
-  font-weight: 500;
-}
-
-.nav-link:hover {
-  color: #333 !important;
-  background-color: #f1f1f1;
-  border-radius: 6px;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  display: none;
-  flex-direction: column;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  z-index: 100;
-  min-width: 220px;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: flex;
-}
-
-.dropdown-menu a {
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  color: #222 !important;
-  white-space: nowrap;
-}
-
-.dropdown-menu a:hover {
-  background-color: #f8f9fa;
-  border-radius: 4px;
-  color: #000 !important;
-}
-
-/* .nav-link {
-  white-space: nowrap;
-} */
-
-</style> -->
 <style scoped>
 
 .app-header {
@@ -206,14 +134,16 @@ nav ul li {
   background-color: #f8f9fa;
   border-radius: 4px;
   color: #000 !important;
+  background-image: none !important;
 }
 
 @media (max-width: 576px) {
   .dropdown-menu {
-    left: 0;
+	display: none !important;
+    /* left: 0;
     right: 0;
     width: auto;
-    max-width: 100%;
+    max-width: 100%; */
   }
 }
 </style>
